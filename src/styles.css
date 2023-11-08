@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+/* @font-face {
+  font-family: 'Krub';
+  src: url('./assets/fonts/Krub-Regular.ttf') format('truetype');
+  /* Añade otras fuentes si es necesario, como fuentes negritas o cursivas */
+
+
+/* Aplica la fuente Krub a todo el texto en la aplicación */
+body {
+  font-family: 'Krub', sans-serif;
+}
