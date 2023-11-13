@@ -8,4 +8,5 @@
 /* Aplica la fuente Krub a todo el texto en la aplicación */
 body {
   font-family: 'Krub', sans-serif;
+  margin: 0;
 }
