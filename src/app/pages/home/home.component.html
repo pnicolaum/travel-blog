@@ -1,15 +1,67 @@
 <app-header></app-header>
 
+<section class="hero-cont">
+  <!-- <img src="../../assets/hero.jpg" alt="hero"> -->
+  <p>
+    Encantado de conocerte
+  </p>
+</section>
+
+<h1>anuncio</h1>
+
 <app-slider></app-slider>
 
-<h1>Sldier de blogs</h1>
+<!-- Redes Sociales -->
+<h1>
+  Redes sociales / actualdiad
+  <br>
+</h1>
+<p>
+  (mas adelante cuando tengamos contenido)
+</p>
 
-<h1>Redes sociales / actualdiad</h1>
 
-<app-contact-form></app-contact-form>
+<div class="contact-cont">
+  <app-contact-form></app-contact-form>
+</div>
 
-<h1>Donaciones / patreon</h1>
 
-<h1>Input subscripcion</h1>
+<section class="donation-cont">
+  Contribuye con nostros a traves de donaciones
+  <br>
+  o apoyanos desde patreon
+  <input type="button" value="DONACIONES">
+  <a href="/patreon">
+    <img src="../../assets/patreon_banner.png" alt="desc" width="100px">
+  </a>
+</section>
 
-<app-footer></app-footer>
+
+<!-- Subscripccion via mail -->
+<section class="subscription-cont">
+  <p>
+    Mantente al día de nuestras novedades suscribiendote con tu mail!
+    <br>
+    Te actualizaremos cuando subamos un blog nuevo!
+  </p>
+
+  <form action="" class="form-subscription">
+    <div class="email-cont">
+      <input type="email" name="email" id="email" placeholder="Escribe tu mail">
+      <input type="button" name="subscription" id="subscription" value="Suscribirse">
+    </div>
+
+    <div>
+      <input type="checkbox" name="terms" id="terms">
+      <label for="terms">He leído y aceptro la
+        <a href="">política de privacidad</a>
+      </label>
+    </div>
+  </form>
+
+</section>
+
+
+<footer>
+  <app-footer></app-footer>
+</footer>

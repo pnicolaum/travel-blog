@@ -1,0 +1,47 @@
+fieldset {
+  margin: 0px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+textarea {
+  margin-bottom: 15px;
+  padding: 0px;
+}
+
+.container-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 767px) {
+  .field-name-tel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+  }
+
+
+}
+
+.filed-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-send {
+  width: 200px;
+  height: 50px;
+}
