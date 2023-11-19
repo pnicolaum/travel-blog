@@ -16,12 +16,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { LastBlogsComponent } from './pages/last-blogs/last-blogs.component';
 import { PatreonComponent } from './pages/patreon/patreon.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { SignUpComponent } from './pages/sign-up/sign-up.component';
+// import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'sign-in', component: SignInComponent },
-  { path: 'sign-up', component: SignUpComponent },
+  // { path: 'sign-up', component: SignUpComponent },
   { path: 'spain', component: SpainComponent },
   { path: 'italy', component: ItalyComponent },
   { path: 'europe', component: EuropeComponent },
@@ -38,7 +38,15 @@ const appRoutes: Routes = [
     SliderComponent,
     ContactFormComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    SignInComponent,
+    SpainComponent,
+    ItalyComponent,
+    EuropeComponent,
+    AsiaComponent,
+    LastBlogsComponent,
+    PatreonComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +54,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: []
 })
 export class AppModule { }
