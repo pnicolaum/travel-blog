@@ -1,6 +1,78 @@
 <app-header></app-header>
-<h1>last blogs page</h1>
+<h1>Últimos Blogs</h1>
 
+<section class="filter-cont">
+  <div>
+    Filtros
+  </div>
+  <div>
+    <label for="continentSelect">Continente: </label>
+    <select id="continentSelect" name="continent">
+      <option value="asia">Asia</option>
+      <option value="europe">Europa</option>
+    </select>
+  </div>
+  <div>
+    <label for="country">País: </label>
+    <input type="text" placeholder="Pais" id="name">
+  </div>
 
+  <div>
+    <label for="daysSelect">Días: </label>
+    <select id="daysSelect" name="days">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+  </div>
+
+</section>
+
+<br>
+Aqui sera un bucle en el back, ahora
+pongo 5 imagenes de fondo
+(las imagenes serán del mismo tamaño)
+
+<div class="page_width">
+  <section>
+
+    <div class="blogs-cont">
+      <div class="blog-cont">
+        <p>Vuelta a Menorca en 7 días</p>
+        <img src="../../assets/menorca.jpg" alt="">
+      </div>
+
+      <div class="blog-cont">
+        <p>Londres en 4 días</p>
+        <img src="../../assets/london.jpg" alt="">
+      </div>
+
+      <div class="blog-cont">
+        <p>Roma, la ciudad del amor</p>
+        <img src="../../assets/london.jpg" alt="">
+      </div>
+
+      <div class="blog-cont">
+        <p>Bilbao, clásico de España en 2 días</p>
+        <img src="../../assets/london.jpg" alt="">
+      </div>
+
+      <div class="blog-cont">
+        <p>London</p>
+        <img src="../../assets/london.jpg" alt="">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+    A <br> N <br> U <br> N <br> C <br> I <br> O
+  </section>
+</div>
 
 <app-footer></app-footer>
