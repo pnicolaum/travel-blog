@@ -1,0 +1,1 @@
+const getUsersQuery = "SELECT * FROM subscriptions";
