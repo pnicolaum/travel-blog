@@ -36,9 +36,6 @@ export class SubscriptionComponent {
             console.log(error);
           });
     }
-    else {
-      console.log("Pon un correo con @");
-    }
 
   }
 

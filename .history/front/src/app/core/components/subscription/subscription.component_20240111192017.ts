@@ -25,21 +25,16 @@ export class SubscriptionComponent {
   }
 
   postMail() {
-    if (this.mail.indexOf("@") !== -1) {
-      this.subscriptionService.post({ mail: this.mail })
-        .subscribe(
-          data => {
-            this.mail = data;
-            console.log(data);
-          },
-          error => {
-            console.log(error);
-          });
-    }
-    else {
-      console.log("Pon un correo con @");
-    }
-
+    this.subscriptionService.post(this.mail)
+      .subscribe(
+        data => {
+          this.mail = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+          res.status(500).send("Internal Server Error");
+        });
   }
 
 }

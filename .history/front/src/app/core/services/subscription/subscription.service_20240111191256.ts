@@ -20,8 +20,8 @@ export class SubscriptionService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  post(mail: any): Observable<any> {
-    return this.http.post(baseUrl, mail);
+  post(data: any): Observable<any> {
+    return this.http.post(baseUrl, data);
   }
 
 }
