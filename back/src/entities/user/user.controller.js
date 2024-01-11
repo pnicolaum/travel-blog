@@ -1,5 +1,5 @@
 const pool = require('../../../db.js');
-const queries = require('./user.queries.ts');
+const queries = require('./user.queries.js');
 
 const getUsers = (req, res) => {
     pool.query(queries.getUsersQuery, (error, results) => {
@@ -14,15 +14,17 @@ const addUsers = (req, res) => {
     pool.query(queries.checkMailExistsQuery, [mail], (error, results) => {
         if (results.rows.length) {
             res.send("Email already exists");
+        } else { // add user to ddbb
+            pool.query(
+                queries.addUsersQuery,
+                [nick, name, surname, mail, password, phone, dob, nationality, gender],
+                (error, results) => {
+                    if (error) throw error;
+                    res.status(201).send("User added succesfully");
+                })
         }
-        // add user to ddbb
-        pool.query(
-            queries.addUserQuery,
-            [nick, name, surname, mail, password, phone, dob, nationality, gender],
-            (error, results) => {
-                if (error) throw error;
-                res.status(201).send("User added succesfully");
-            })
+
+
     })
 }
 
@@ -44,13 +46,12 @@ const removeUser = (req, res) => {
         const noUserFound = !results.rows.length;
         if (noUserFound) {
             res.send("User not found in the database");
+        } else { // remove user
+            pool.query(queries.removeUserQuery, [id], (error, results) => {
+                if (error) throw error;
+                res.status(200).send("User removed succesfully");
+            })
         }
-
-        // remove user
-        pool.query(queries.removeUserQuery, [id], (error, results) => {
-            if (error) throw error;
-            res.status(200).send("User removed succesfully");
-        })
     })
 }
 
