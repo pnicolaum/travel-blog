@@ -10,6 +10,8 @@ const pool = new Pool({
 })
 
 
+require('pg').types.setTypeParser(require('pg').types.builtins.DATE, value => value);
+
 
 pool.connect((err) => {
     if (err) {

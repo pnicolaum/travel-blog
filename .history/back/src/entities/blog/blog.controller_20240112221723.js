@@ -50,7 +50,8 @@ const removeBlog = (req, res) => {
 const getRecentBlogs = (req, res) => {
     pool.query(queries.getRecentBlogsQuery, (error, results) => {
         if (error) throw error;
-        res.status(200).json(results.rows);
+        console.log(results.rows)
+        res.status(200).json(titlesAndDates);
     })
 }
 

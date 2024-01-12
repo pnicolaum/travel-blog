@@ -6,11 +6,9 @@ const router = Router();
 router.get("/", controller.getBlogs);
 router.post("/", controller.addBlogs);
 
-router.get("/recent-blogs", controller.getRecentBlogs);
-
 router.get("/:id", controller.getBlogById);
 router.delete("/:id", controller.removeBlog);
 
-
+router.get("/recent-blogs", controller.getLast6Blogs);
 
 module.exports = router;

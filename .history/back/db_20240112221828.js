@@ -10,6 +10,7 @@ const pool = new Pool({
 })
 
 
+pool.types.setTypeParser(pool.types.builtins.DATE, value => value);
 
 pool.connect((err) => {
     if (err) {

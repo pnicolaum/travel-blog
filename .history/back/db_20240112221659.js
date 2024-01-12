@@ -1,3 +1,5 @@
+import pg from pg;
+
 const { error } = require('console');
 const { Pool } = require('pg');
 
@@ -10,6 +12,7 @@ const pool = new Pool({
 })
 
 
+pg.types.setTypeParser(pg.types.builtins.DATE, value => value);
 
 pool.connect((err) => {
     if (err) {

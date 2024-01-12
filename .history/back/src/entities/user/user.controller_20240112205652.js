@@ -15,12 +15,11 @@ const addUsers = (req, res) => {
         if (results.rows.length) {
             res.send("Email already exists");
         } else {
-            // check if username exists
+
             pool.query(queries.checkUsernameExistsQuery, [nick], (error, results) => {
                 if (results.rows.length) {
                     res.send("Username already exists");
-                } else {
-                    // add user to ddbb    
+                } else { // add user to ddbb    
                     pool.query(
                         queries.addUsersQuery,
                         [nick, name, surname, mail, password, phone, dob, nationality, gender],
@@ -30,7 +29,12 @@ const addUsers = (req, res) => {
                         })
                 }
             })
+
+
+
         }
+
+
     })
 }
 

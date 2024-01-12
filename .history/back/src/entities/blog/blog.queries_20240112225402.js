@@ -5,7 +5,6 @@ const getBlogByIdQuery = "SELECT * FROM blogs WHERE id = $1";
 const removeBlogQuery = "DELETE FROM blogs WHERE id = $1"
 const getRecentBlogsQuery = "SELECT title FROM blogs ORDER BY date DESC LIMIT 6";
 
-
 module.exports = {
     getBlogsQuery,
     addBlogsQuery,
