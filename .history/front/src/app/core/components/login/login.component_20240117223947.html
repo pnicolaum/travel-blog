@@ -1,0 +1,40 @@
+<section class="width_page">
+  <form action="">
+
+    <label>Usuario / Email</label>
+    <input type="text">
+
+    <label>Contraseña</label>
+    <input type="password">
+
+    <input type="submit" value="Inicio sesion" class="btn">
+  </form>
+
+  <form action="" style="margin-top: 4rem;">
+    <label>Usuario*</label>
+    <input type="text" [(ngModel)]="username">
+
+    <label>Nombre*</label>
+    <input type="text" [(ngModel)]="name">
+
+    <label>Apellido*</label>
+    <input type="text" [(ngModel)]="surname">
+
+    <label>Email*</label>
+    <input type="mail" [(ngModel)]="mail">
+
+    <label>Contraseña*</label>
+    <input type="password" [(ngModel)]="password">
+
+    <label>Confirma contraseña*</label>
+    <input type="password" [(ngModel)]="passwrod2">
+
+    <label>Confirma admin*</label>
+    <input type="password" [(ngModel)]="masterPassword">
+
+    <input type="submit" value="Registrar" class="btn" (click)="postLogin()">
+
+  </form>
+</section>
+
+<app-footer></app-footer>
