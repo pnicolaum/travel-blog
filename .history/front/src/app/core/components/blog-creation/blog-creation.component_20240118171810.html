@@ -1,0 +1,60 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="imagen">Imagen:</label>
+  <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+  <br>
+
+  <!-- Continente -->
+  <label for="continente">Continente:</label>
+  <select id="continente" name="continente" required>
+    <option value="america">América</option>
+    <option value="europa">Europa</option>
+    <option value="asia">Asia</option>
+    <option value="africa">África</option>
+    <option value="oceania">Oceanía</option>
+  </select>
+
+  <br>
+
+  <!-- País -->
+  <label for="pais">País:</label>
+  <input type="text" id="pais" name="pais" required>
+
+  <br>
+
+  <!-- Descripción -->
+  <label for="descripcion">Descripción:</label>
+  <textarea id="descripcion" name="descripcion" required></textarea>
+
+  <br>
+
+  <!-- Días -->
+  <label for="dias">Días:</label>
+  <select id="dias" name="dias" required>
+    <option value="1">1 día</option>
+    <option value="2">2 días</option>
+    <option value="3">3 días</option>
+    <option value="4">4 días</option>
+    <option value="5">5 días</option>
+    <option value="6">6 días</option>
+    <option value="7">7 días</option>
+  </select>
+
+  <br>
+
+  <!-- Fecha -->
+  <label for="fecha">Fecha:</label>
+  <input type="date" id="fecha" name="fecha" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <button type="submit">Enviar</button>
+</form>

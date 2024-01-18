@@ -22,11 +22,11 @@ export class LoginService {
   }
 
 
-  // login(username: string, password: string): Observable<any> {
-  //   const loginData = { username, password };
+  login(username: string, password: string): Observable<any> {
+    const loginData = { username, password };
 
-  //   return this.http.post(`${baseUrl}/login`, loginData);
-  // }
+    return this.http.post(`${baseUrl}/login`, loginData);
+  }
 
 
 }

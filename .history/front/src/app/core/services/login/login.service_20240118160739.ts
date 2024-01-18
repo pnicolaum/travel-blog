@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 const baseUrl = 'http://localhost:3000/api/v1/users/';
+const token = "";
 
 @Injectable({
   providedIn: 'root'
@@ -18,15 +20,17 @@ export class LoginService {
   }
 
   postCredentials(data: any): Observable<any> {
-    return this.http.post(`${baseUrl}/credentials`, data, { responseType: 'text' });
+    return this.http.post(`${baseUrl}/check-login`, data, { responseType: 'text' });
   }
 
-
-  // login(username: string, password: string): Observable<any> {
-  //   const loginData = { username, password };
-
-  //   return this.http.post(`${baseUrl}/login`, loginData);
-  // }
-
+  login(username: any, password: any): Observable<any> {
+    return this.http.post(`${baseUrl}/login`, { username, password }).pipe(
+      tap(response => {
+        if (response.token) {
+          localStorage.setItem('token', response.token);
+        }
+      })
+    );
+  }
 
 }

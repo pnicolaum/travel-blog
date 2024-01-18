@@ -1,0 +1,6 @@
+<div>
+  <label for="fileInput">Seleccionar imagen:</label>
+  <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" />
+
+  <button (click)="uploadImage()">Subir imagen</button>
+</div>

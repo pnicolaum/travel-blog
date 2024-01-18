@@ -1,0 +1,68 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="imagen">Imagen:</label>
+  <input type="file" id="imagen" name="imagen" accept="image/*" (change)="onFileSelected($event)" required>
+
+
+  <br>
+
+  <!-- Continente -->
+  <label for="continente">Continente:</label>
+  <select id="continente" name="continente" required>
+    <!-- <option value="america">América</option> -->
+    <option value="Europa">Europa</option>
+    <option value="Asia">Asia</option>
+    <!-- <option value="africa">África</option> -->
+    <!-- <option value="oceania">Oceanía</option> -->
+    <option value="Spain">Oceanía</option>
+    <option value="Italy">Oceanía</option>
+  </select>
+
+  <br>
+
+  <!-- País -->
+  <label for="pais">País:</label>
+  <input type="text" id="pais" name="pais" required>
+
+  <br>
+
+  <!-- Descripción -->
+  <label for="descripcion">Descripción:</label>
+  <textarea id="descripcion" name="descripcion" required></textarea>
+
+  <br>
+
+  <!-- Días -->
+  <label for="dias">Días:</label>
+  <select id="dias" name="dias" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+  </select>
+
+  <br>
+
+  <!-- Fecha -->
+  <label for="fecha">Fecha:</label>
+  <input type="date" id="fecha" name="fecha" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <button type="submit">Enviar</button>
+  <br>
+  <br>
+  <button type="submit" (click)="getAllImages()">Get images names</button>
+</form>
+
+<app-image-upload></app-image-upload>

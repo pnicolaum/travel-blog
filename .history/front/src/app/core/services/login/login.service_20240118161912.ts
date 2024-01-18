@@ -18,15 +18,8 @@ export class LoginService {
   }
 
   postCredentials(data: any): Observable<any> {
-    return this.http.post(`${baseUrl}/credentials`, data, { responseType: 'text' });
+    return this.http.post(`${baseUrl}/login`, data, { responseType: 'text' });
   }
-
-
-  // login(username: string, password: string): Observable<any> {
-  //   const loginData = { username, password };
-
-  //   return this.http.post(`${baseUrl}/login`, loginData);
-  // }
 
 
 }

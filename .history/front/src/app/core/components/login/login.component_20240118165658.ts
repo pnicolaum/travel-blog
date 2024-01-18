@@ -72,20 +72,20 @@ export class LoginComponent {
   }
 
 
-  // login() {
-  //   this.LoginService.login(this.username, this.password).subscribe(
-  //     response => {
-  //       // Almacena el token en el almacenamiento local o en una cookie
-  //       localStorage.setItem('token', response.token);
+  login() {
+    this.LoginService.login(this.username, this.password).subscribe(
+      response => {
+        // Almacena el token en el almacenamiento local o en una cookie
+        localStorage.setItem('token', response.token);
 
-  //       // Redirige a una página segura o realiza otras acciones necesarias
-  //       console.log('Inicio de sesión exitoso');
-  //     },
-  //     error => {
-  //       console.error('Error de inicio de sesión:', error);
-  //     }
-  //   );
-  // }
+        // Redirige a una página segura o realiza otras acciones necesarias
+        console.log('Inicio de sesión exitoso');
+      },
+      error => {
+        console.error('Error de inicio de sesión:', error);
+      }
+    );
+  }
 
 
 

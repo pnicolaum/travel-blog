@@ -29,8 +29,9 @@ import { LastBlogsComponent } from './pages/last-blogs/last-blogs.component';
 import { PatreonComponent } from './pages/patreon/patreon.component';
 
 // Services
+
 import { BlogCreationService } from './core/services/blog-creation/blog-creation.service';
-import { ImageUploadService } from './core/services/image-upload/image-upload.service';
+import { ImageUpdloadService } from './core/services/image-upload/image-upload.service';
 import { LoginService } from './core/services/login/login.service';
 import { SubscriptionService } from './core/services/subscription/subscription.service';
 
@@ -80,7 +81,7 @@ const appRoutes: Routes = [
   providers: [
     SubscriptionService,
     LoginService,
-    ImageUploadService,
+    ImageUpdloadService,
     BlogCreationService
   ],
   bootstrap: [AppComponent],
