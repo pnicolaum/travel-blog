@@ -2,6 +2,7 @@ const pool = require('../../../db.js');
 const queries = require('./user.queries.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const jwtSecret = "pablo"; // ponerla en .env
 
 // Obtener todos los usuarios 
 const getUsers = (req, res) => {
@@ -118,30 +119,23 @@ const updateUser = (req, res) => {
 const checkCredentials = (req, res) => {
     const { username, password } = req.body;
 
-    pool.query(queries.getHashFromUsername, [username], (error, userResutls) => {
+    pool.query(queries.getHashFromUsername, [username], (error, results) => {
         // compara password escrita por el usuario y hash en la bbdd
-        const passwordMatches = bcrypt.compareSync(password, userResutls.rows[0].password);
+        const passwordMatches = bcrypt.compareSync(password, results.rows[0].password);
 
         if (error) throw error;
         if (passwordMatches) {
-            res.status(200).json({ message: 'Credenciales válidas' });
+            // const token = jwt.sign({ userId: results.rows[0].id }, jwtSecret, { expiresIn: '1h' });
+            // res.cookie("SESSIONID", jwtBearerToken, { httpOnly: true, secure: true });
+            res.status(200).json({ message: 'Credenciales válidas, Iniciando sesion' });
+            // res.status(200).json({ token, expiresIn: '1h' });
+            // res.json({ token });
         } else {
             // res.status(401).json({ message: 'Credenciales inválidas' });
             res.status(201).json({ message: 'Credenciales inválidas' });
         }
     })
 
-
-
-    // pool.query(queries.checkCredentialsQuery, [username, password], (error, results) => {
-    //     if (error) throw error;
-    //     if (results.rows.length > 0) {
-    //         res.status(200).json({ message: 'Credenciales válidas' });
-    //     } else {
-    //         // res.status(401).json({ message: 'Credenciales inválidas' });
-    //         res.status(201).json({ message: 'Credenciales inválidas' });
-    //     }
-    // })
 }
 
 module.exports = {

@@ -8,7 +8,7 @@ router.post("/", controller.addUsers);
 
 // router.post("/login", controller.loginUser);
 
-router.post("/login", controller.checkCredentials);
+router.post("/credentials", controller.checkCredentials);
 
 router.get("/:id", controller.getUserById);
 router.put("/:id", controller.updateUser);
