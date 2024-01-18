@@ -30,7 +30,6 @@ module.exports = {
     getUsersQuery,
     getUserByIdQuery,
     getUserByUsernameQuery,
-    getHashFromUsername,
     checkMailExistsQuery,
     checkUsernameExistsQuery,
     checkCredentialsQuery,

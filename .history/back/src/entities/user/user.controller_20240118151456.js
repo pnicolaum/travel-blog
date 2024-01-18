@@ -117,11 +117,12 @@ const updateUser = (req, res) => {
 // check credentials
 const checkCredentials = (req, res) => {
     const { username, password } = req.body;
-
+    // hash contraseña
     pool.query(queries.getHashFromUsername, [username], (error, userResutls) => {
-        // compara password escrita por el usuario y hash en la bbdd
         const passwordMatches = bcrypt.compareSync(password, userResutls.rows[0].password);
-
+        console.log(password);
+        console.log(userResutls.rows[0]);
+        console.log(userResutls.rows[0].password);
         if (error) throw error;
         if (passwordMatches) {
             res.status(200).json({ message: 'Credenciales válidas' });

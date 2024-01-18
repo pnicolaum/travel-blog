@@ -30,7 +30,7 @@ const getUserByUsername = (req, res) => {
 }
 
 // Añadir usuario
-const addUsers = async (req, res) => {
+const addUsers = (req, res) => {
     const { username, name, surname, mail, password } = req.body;
 
     // check if email is repeated
@@ -44,10 +44,8 @@ const addUsers = async (req, res) => {
             if (results.rows.length) {
                 return res.send("Username already exists");
             }
-
             // hash contraseña
-            const hashedPassword = bcrypt.hashSync(password, 10);
-
+            const hashedPassword = bcrypt.hash(password, 10);
             // add user to ddbb    
             pool.query(
                 queries.addUsersQuery,
@@ -118,30 +116,15 @@ const updateUser = (req, res) => {
 const checkCredentials = (req, res) => {
     const { username, password } = req.body;
 
-    pool.query(queries.getHashFromUsername, [username], (error, userResutls) => {
-        // compara password escrita por el usuario y hash en la bbdd
-        const passwordMatches = bcrypt.compareSync(password, userResutls.rows[0].password);
-
+    pool.query(queries.checkCredentialsQuery, [username, password], (error, results) => {
         if (error) throw error;
-        if (passwordMatches) {
+        if (results.rows.length > 0) {
             res.status(200).json({ message: 'Credenciales válidas' });
         } else {
             // res.status(401).json({ message: 'Credenciales inválidas' });
             res.status(201).json({ message: 'Credenciales inválidas' });
         }
     })
-
-
-
-    // pool.query(queries.checkCredentialsQuery, [username, password], (error, results) => {
-    //     if (error) throw error;
-    //     if (results.rows.length > 0) {
-    //         res.status(200).json({ message: 'Credenciales válidas' });
-    //     } else {
-    //         // res.status(401).json({ message: 'Credenciales inválidas' });
-    //         res.status(201).json({ message: 'Credenciales inválidas' });
-    //     }
-    // })
 }
 
 module.exports = {
