@@ -1,0 +1,13 @@
+<div>
+  <label for="fileInput">Seleccionar imagen para subir:</label>
+  <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" />
+
+  <button (click)="uploadImage()">Subir imagen</button>
+
+  <br>
+  <br>
+
+  <label for="imageName">Nombre de la imagen a eliminar:</label>
+  <input type="text" id="imageName" [(ngModel)]="imageNameToDelete" />
+  <button (click)="deleteImage()">Eliminar imagen</button>
+</div>

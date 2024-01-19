@@ -1,0 +1,25 @@
+<section>
+  <div>
+    <label for="fileInput">Seleccionar imagen para subir:</label>
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" />
+    <button (click)="uploadImage()">Subir imagen</button>
+  </div>
+
+
+  <br>
+  <br>
+  <div>
+    <label for="getImages">Obtener nombres de las imagenes</label>
+    <input type="button" name="getImages" id="getImages" (click)="getAllImages()" value="Get all images names">
+
+  </div>
+
+  <br>
+  <br>
+
+  <label for="imageName">Nombre de la imagen a eliminar:</label>
+  <input type="text" id="imageName" [(ngModel)]="imageNameToDelete" />
+  <button (click)="deleteImage()">Eliminar imagen</button>
+
+
+</section>
