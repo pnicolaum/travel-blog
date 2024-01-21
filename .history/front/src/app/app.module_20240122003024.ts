@@ -14,6 +14,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { ImageUploadComponent } from './core/components/image-upload/image-upload.component';
 import { LoginComponent } from './core/components/login/login.component';
+import { SectionCreationComponent } from './core/components/section-creation/section-creation';
 import { SliderComponent } from './core/components/slider/slider.component';
 import { SubscriptionComponent } from './core/components/subscription/subscription.component';
 
@@ -28,7 +29,6 @@ import { PatreonComponent } from './pages/patreon/patreon.component';
 // Services
 import { BlogCreationService } from './core/services/blog-creation/blog-creation.service';
 // import { BlogResolver } from './core/services/blog-resolver/blog-resolver.service';
-import { SectionCreationComponent } from './core/components/section-creation/section-creation.component';
 import { ImageUploadService } from './core/services/image-upload/image-upload.service';
 import { LoginService } from './core/services/login/login.service';
 import { SubscriptionService } from './core/services/subscription/subscription.service';

@@ -4,7 +4,7 @@ const getSectionByTitleQuery = "SELECT * FROM sections WHERE TRIM(title) = $1";
 const getSectionByKeywordQuery = "SELECT * FROM sections WHERE TRIM(keyword) = $1";
 
 const addSectionsQuery =
-    "INSERT INTO sections (title, text, keyword, structure) VALUES ($1, $2, $3, $4)";
+    "INSERT INTO blogs (title, text, keyword, structure) VALUES ($1, $2, $3, $4)";
 
 
 

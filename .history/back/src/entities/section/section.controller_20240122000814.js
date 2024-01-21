@@ -27,21 +27,8 @@ const getSectionByTitle = (req, res) => {
     })
 }
 
-const addSections = (req, res) => {
-    const { title, text, keyword, structure } = req.body;
-
-    pool.query(
-        queries.addSectionsQuery,
-        [title, text, keyword, structure],
-        (error, results) => {
-            if (error) throw error;
-            res.status(201).send("Section added succesfully");
-        })
-}
-
 module.exports = {
     getSections,
     getSectionById,
-    getSectionByTitle,
-    addSections
+    getSectionByTitle
 }

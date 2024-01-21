@@ -28,11 +28,11 @@ const getSectionByTitle = (req, res) => {
 }
 
 const addSections = (req, res) => {
-    const { title, text, keyword, structure } = req.body;
+    const { title, keyword, continent, country, description, days, date } = req.body;
 
     pool.query(
         queries.addSectionsQuery,
-        [title, text, keyword, structure],
+        [title, keyword, continent, country, description, days, date],
         (error, results) => {
             if (error) throw error;
             res.status(201).send("Section added succesfully");

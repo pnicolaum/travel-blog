@@ -28,7 +28,7 @@ import { PatreonComponent } from './pages/patreon/patreon.component';
 // Services
 import { BlogCreationService } from './core/services/blog-creation/blog-creation.service';
 // import { BlogResolver } from './core/services/blog-resolver/blog-resolver.service';
-import { SectionCreationComponent } from './core/components/section-creation/section-creation.component';
+import { SectionCreationComponent } from './core/components/section-creation/section-creation';
 import { ImageUploadService } from './core/services/image-upload/image-upload.service';
 import { LoginService } from './core/services/login/login.service';
 import { SubscriptionService } from './core/services/subscription/subscription.service';

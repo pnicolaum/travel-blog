@@ -1,0 +1,51 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="keyword">Palabra clave:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+
+
+  <!-- Descripción -->
+  <label for="text">Texto:</label>
+  <textarea id="text" name="text" [(ngModel)]="text" required></textarea>
+
+  <br>
+
+  <!-- Días -->
+  <label for="structure">Días:</label>
+  <select id="structure" name="structure" [(ngModel)]="structure" required>
+    <option [value]="1">1</option>
+    <option [value]="2">2</option>
+    <option [value]="3">3</option>
+    <option [value]="4">4</option>
+    <option [value]="5">5</option>
+    <option [value]="6">6</option>
+    <option [value]="7">7</option>
+    <option [value]="8">8</option>
+    <option [value]="9">9</option>
+    <option [value]="10">10</option>
+    <option [value]="11">11</option>
+    <option [value]="12">12</option>
+  </select>
+
+  <br>
+
+  <!-- Fecha -->
+  <label for="date">Fecha:</label>
+  <input type="date" id="date" name="date" [(ngModel)]="date" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postBlog()">
+
+
+</form>
+
+<app-image-upload></app-image-upload>
