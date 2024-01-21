@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div>
+  <div *ngFor="let blog of blogs; let i = index" class="blogs-cont">
+
+    <a href="/blogs/{{ blog.title }}">{{ blog.title }}</a>
+    <a href="/blogs/{{ blog.title }}">
+      <img [src]="imageUrls[i]" alt="{{ imageName }}" />
+    </a>
+
+
+  </div>
+</div>

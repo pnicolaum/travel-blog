@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div *ngFor="let blog of blogs" class="for_blogs">
+  <a href="/blogs/{{ blog.title }}">{{ blog.title }}</a>
+  <a href="/blogs/{{ blog.title }}">
+    <img [src]="blog.imageUrl" alt="{{ imageName }}" />
+
+  </a>
+</div>

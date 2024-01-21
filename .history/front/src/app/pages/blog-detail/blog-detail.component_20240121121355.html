@@ -1,0 +1,4 @@
+<div *ngFor="let blog of blogs">
+  <!-- <a [routerLink]="['/blogs', blog.title]">{{ blog.title }}</a> -->
+  <a [routerLink]="['/blogs', encodeURIComponent(blog.title)]">{{ blog.title }}</a>
+</div>
