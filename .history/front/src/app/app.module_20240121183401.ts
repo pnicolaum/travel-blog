@@ -81,9 +81,11 @@ const appRoutes: Routes = [
   providers: [
     BlogCreationService,
     BlogResolver,
-    ImageUploadService,
+    SubscriptionService,
     LoginService,
-    SubscriptionService
+    ImageUploadService,
+
+
   ],
   bootstrap: [AppComponent],
   schemas: []

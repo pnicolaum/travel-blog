@@ -84,6 +84,10 @@ const appRoutes: Routes = [
     ImageUploadService,
     LoginService,
     SubscriptionService
+
+
+
+
   ],
   bootstrap: [AppComponent],
   schemas: []

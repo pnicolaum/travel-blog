@@ -51,25 +51,22 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    // components
     AppComponent,
-    BlogCreationComponent,
-    BlogDetailDisplayComponent,
+    HeaderComponent,
+    SliderComponent,
     ContactFormComponent,
     FooterComponent,
-    HeaderComponent,
-    ImageUploadComponent,
-    LoginComponent,
-    SliderComponent,
-    SubscriptionComponent,
-
-    // pages
-    AboutUsComponent,
-    BlogCreationAdminComponent,
-    BlogDetailComponent,
     HomeComponent,
     IdentificationComponent,
     PatreonComponent,
+    AboutUsComponent,
+    SubscriptionComponent,
+    BlogCreationAdminComponent,
+    BlogCreationComponent,
+    LoginComponent,
+    ImageUploadComponent,
+    BlogDetailComponent,
+    BlogDetailDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -79,11 +76,11 @@ const appRoutes: Routes = [
     [FormsModule]
   ],
   providers: [
-    BlogCreationService,
-    BlogResolver,
-    ImageUploadService,
+    SubscriptionService,
     LoginService,
-    SubscriptionService
+    ImageUploadService,
+    BlogCreationService,
+    BlogResolver
   ],
   bootstrap: [AppComponent],
   schemas: []

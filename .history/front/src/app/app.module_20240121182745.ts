@@ -21,8 +21,10 @@ import { SubscriptionComponent } from './core/components/subscription/subscripti
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BlogCreationAdminComponent } from './pages/blog-creation-admin/blog-creation-admin.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { EuropeComponent } from './pages/europe/europe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IdentificationComponent } from './pages/identification/identification.component';
+import { LastBlogsComponent } from './pages/last-blogs/last-blogs.component';
 import { PatreonComponent } from './pages/patreon/patreon.component';
 
 // Services
@@ -36,6 +38,8 @@ import { SubscriptionService } from './core/services/subscription/subscription.s
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'identification', component: IdentificationComponent },
+  { path: 'europe', component: EuropeComponent },
+  { path: 'last-blogs', component: LastBlogsComponent },
   { path: 'patreon', component: PatreonComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'blog-creation-admin', component: BlogCreationAdminComponent },
@@ -51,25 +55,24 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    // components
     AppComponent,
-    BlogCreationComponent,
-    BlogDetailDisplayComponent,
+    HeaderComponent,
+    SliderComponent,
     ContactFormComponent,
     FooterComponent,
-    HeaderComponent,
-    ImageUploadComponent,
-    LoginComponent,
-    SliderComponent,
-    SubscriptionComponent,
-
-    // pages
-    AboutUsComponent,
-    BlogCreationAdminComponent,
-    BlogDetailComponent,
     HomeComponent,
     IdentificationComponent,
+    EuropeComponent,
+    LastBlogsComponent,
     PatreonComponent,
+    AboutUsComponent,
+    SubscriptionComponent,
+    BlogCreationAdminComponent,
+    BlogCreationComponent,
+    LoginComponent,
+    ImageUploadComponent,
+    BlogDetailComponent,
+    BlogDetailDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -79,11 +82,11 @@ const appRoutes: Routes = [
     [FormsModule]
   ],
   providers: [
-    BlogCreationService,
-    BlogResolver,
-    ImageUploadService,
+    SubscriptionService,
     LoginService,
-    SubscriptionService
+    ImageUploadService,
+    BlogCreationService,
+    BlogResolver
   ],
   bootstrap: [AppComponent],
   schemas: []

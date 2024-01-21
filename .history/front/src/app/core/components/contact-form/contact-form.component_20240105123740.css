@@ -24,6 +24,17 @@ textarea {
   flex-direction: column;
 }
 
+
+@media (min-width: 767px) {
+  .field-name-tel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+  }
+
+
+}
+
 .filed-btn {
   display: flex;
   align-items: center;

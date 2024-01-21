@@ -65,11 +65,13 @@ const appRoutes: Routes = [
 
     // pages
     AboutUsComponent,
-    BlogCreationAdminComponent,
-    BlogDetailComponent,
     HomeComponent,
     IdentificationComponent,
     PatreonComponent,
+
+    BlogCreationAdminComponent,
+    BlogDetailComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -79,11 +81,11 @@ const appRoutes: Routes = [
     [FormsModule]
   ],
   providers: [
-    BlogCreationService,
-    BlogResolver,
-    ImageUploadService,
+    SubscriptionService,
     LoginService,
-    SubscriptionService
+    ImageUploadService,
+    BlogCreationService,
+    BlogResolver
   ],
   bootstrap: [AppComponent],
   schemas: []
