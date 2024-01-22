@@ -14,14 +14,11 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { ImageUploadComponent } from './core/components/image-upload/image-upload.component';
 import { LoginComponent } from './core/components/login/login.component';
-import { SectionCreationComponent } from './core/components/section-creation/section-creation.component';
-import { SectionUpdateComponent } from './core/components/section-update/section-update.component';
 import { SliderComponent } from './core/components/slider/slider.component';
 import { SubscriptionComponent } from './core/components/subscription/subscription.component';
 
 // Pages
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { BlogAdminComponent } from './pages/blog-admin/blog-admin.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IdentificationComponent } from './pages/identification/identification.component';
@@ -31,10 +28,13 @@ import { PatreonComponent } from './pages/patreon/patreon.component';
 import { BlogCreationService } from './core/services/blog-creation/blog-creation.service';
 // import { BlogResolver } from './core/services/blog-resolver/blog-resolver.service';
 import { BlogUpdateComponent } from './core/components/blog-update/blog-update.component';
+import { SectionCreationComponent } from './core/components/section-creation/section-creation.component';
 import { ImageUploadService } from './core/services/image-upload/image-upload.service';
 import { LoginService } from './core/services/login/login.service';
 import { SectionCreationService } from './core/services/section-creation/section-creation.service';
+
 import { SubscriptionService } from './core/services/subscription/subscription.service';
+import { BlogAdminComponent } from './pages/blog-admin/blog-admin.component';
 
 
 const appRoutes: Routes = [
@@ -66,7 +66,6 @@ const appRoutes: Routes = [
     ImageUploadComponent,
     LoginComponent,
     SectionCreationComponent,
-    SectionUpdateComponent,
     SliderComponent,
     SubscriptionComponent,
 

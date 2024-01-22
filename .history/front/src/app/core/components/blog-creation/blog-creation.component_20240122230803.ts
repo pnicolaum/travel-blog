@@ -20,8 +20,12 @@ export class BlogCreationComponent {
   data: any;
 
 
+  // blogForm: FormGroup;
+
   constructor(
-    private blogCreationService: BlogCreationService,
+
+    private blogCreationService: BlogCreationService, // Reemplaza BlogService con el nombre de tu servicio
+
   ) { }
 
 

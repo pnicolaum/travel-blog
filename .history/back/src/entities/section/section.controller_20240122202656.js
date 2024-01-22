@@ -41,8 +41,6 @@ const getSectionByKeyword = (req, res) => {
 const addSections = (req, res) => {
     const { title, description, keyword, structure } = req.body;
 
-    // TO DO: no se pueden repetir keywords
-
     pool.query(
         queries.addSectionsQuery,
         [title, description, keyword, structure],

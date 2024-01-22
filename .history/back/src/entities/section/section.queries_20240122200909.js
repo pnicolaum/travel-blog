@@ -9,14 +9,14 @@ const addSectionsQuery =
     "INSERT INTO sections (title, description, keyword, structure) VALUES ($1, $2, $3, $4)";
 
 // remove
-const removeSectionQuery = "DELETE FROM sections WHERE id = $1"
+const removeSectionQuery = "DELETE sections blogs WHERE id = $1"
 
 // update
-const updateSectionByIdQuery = "UPDATE sections SET " +
+const updateSectionByIdQuery = "UPDATE blogs SET " +
     "title = COALESCE($1, title), " +
     "description = COALESCE($2, description), " +
     "keyword = COALESCE($3, keyword), " +
-    "structure = COALESCE($4, structure) " +
+    "structure = COALESCE($4, structure), " +
     "WHERE id = $5";
 
 

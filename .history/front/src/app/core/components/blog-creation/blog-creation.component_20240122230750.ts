@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BlogCreationService } from '../../services/blog-creation/blog-creation.service';
 
 
@@ -20,9 +22,17 @@ export class BlogCreationComponent {
   data: any;
 
 
+  // blogForm: FormGroup;
+
   constructor(
-    private blogCreationService: BlogCreationService,
-  ) { }
+    private formBuilder: FormBuilder,
+    private blogCreationService: BlogCreationService, // Reemplaza BlogService con el nombre de tu servicio
+    private router: Router
+  ) {
+    // this.blogForm = this.formBuilder.group({
+    //   title: ['', Validators.required], // Asegúrate de tener un campo 'title' en tu formulario
+    // });
+  }
 
 
   postBlog() {

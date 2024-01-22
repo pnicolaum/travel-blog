@@ -11,8 +11,6 @@ const getBlogs = (req, res) => {
 const addBlogs = (req, res) => {
     const { title, keyword, continent, country, description, days, date } = req.body;
 
-    // TO DO: no se pueden repetir keywords
-
     pool.query(
         queries.addBlogsQuery,
         [title, keyword, continent, country, description, days, date],

@@ -15,27 +15,15 @@ export class SectionCreationComponent {
   data: any;
 
   constructor(
+
     private sectionCreationService: SectionCreationService, // Reemplaza BlogService con el nombre de tu servicio
-  ) { }
 
-  postSection() {
-    const data = {
-      title: this.title,
-      keyword: this.keyword,
-      description: this.description,
-      structure: this.structure,
-    };
-
-    this.sectionCreationService.postSection(data)
-      .subscribe(
-        response => {
-          this.data = response;
-          console.log(response);
-        },
-        error => {
-          console.log(error);
-        });
-
+  ) {
+    // this.blogForm = this.formBuilder.group({
+    //   title: ['', Validators.required], // Asegúrate de tener un campo 'title' en tu formulario
+    // });
   }
+
+
 
 }

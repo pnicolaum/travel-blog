@@ -8,8 +8,6 @@ router.post("/", controller.addSections);
 
 router.get("/:keyword", controller.getSectionByKeyword);
 
-router.get("/get-id/:id", controller.getSectionById);
-router.put("/get-id/:id", controller.updateSectionById);
 router.delete("/get-id/:id", controller.removeSection);
 
 module.exports = router;

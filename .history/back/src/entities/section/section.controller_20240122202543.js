@@ -41,8 +41,6 @@ const getSectionByKeyword = (req, res) => {
 const addSections = (req, res) => {
     const { title, description, keyword, structure } = req.body;
 
-    // TO DO: no se pueden repetir keywords
-
     pool.query(
         queries.addSectionsQuery,
         [title, description, keyword, structure],
@@ -78,6 +76,8 @@ const updateSectionById = (req, res) => {
     const id = parseInt(req.params.id);
     const { title, description, keyword, structure } = req.body;
 
+    console.log(id);
+    console.log(req.body);
     // check if keyword is repeated
     pool.query(queries.getSectionByKeywordQuery, [keyword], (error, results) => {
         if (results.rows.length && results.rows[0].id !== id) {

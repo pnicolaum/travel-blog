@@ -26,7 +26,7 @@ export class SectionCreationComponent {
       structure: this.structure,
     };
 
-    this.sectionCreationService.postSection(data)
+    this.blogCreationService.postBlog(data)
       .subscribe(
         response => {
           this.data = response;
