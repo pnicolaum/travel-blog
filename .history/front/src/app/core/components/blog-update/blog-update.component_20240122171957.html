@@ -1,0 +1,20 @@
+<form action="" class="form">
+
+  <!-- Imagen -->
+  <label for="keyword">Indica la palabra clave del blog:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="Blogkeyword" required>
+
+  <br>
+
+  <input type="submit" value="Ver todas palabras clave" class="btn" (click)="getBlogTitlesAndKeywords()">
+
+
+  <br>
+
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Actualizar blog" class="btn" (click)="updateBlog()">
+
+
+
+</form>
