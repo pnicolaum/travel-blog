@@ -13,6 +13,7 @@ export class BlogCreationService {
 
   constructor(private http: HttpClient) { }
 
+  // get
   getBlogByTitle(title: string): Observable<any> {
     return this.http.get(`${baseUrl}/${title}`);
   }
@@ -25,15 +26,22 @@ export class BlogCreationService {
     return this.http.get(baseUrl);
   }
 
+  // post
   postBlog(data: any): Observable<any> {
     return this.http.post(baseUrl, data, { responseType: 'text' });
   }
 
-
+  // put
   updateBlog(data: any): Observable<any> {
-    console.log(`${baseUrl}/get-id`);
     return this.http.put(`${baseUrl}/get-id/${data.id}`, data, { responseType: 'text' });
   }
+
+
+  // remove
+  deleteBlog(data: any): Observable<any> {
+    return this.http.delete(`${baseUrl}/get-id/${data.id}`, data);
+  }
+
 
 
 }

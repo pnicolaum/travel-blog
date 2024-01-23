@@ -9,7 +9,7 @@ const baseUrl = 'http://localhost:3000/api/v1/sections/';
   providedIn: 'root'
 })
 
-export class SectionCreationService {
+export class SectionService {
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class SectionCreationService {
   }
 
   getSectionByKeyword(keyword: string): Observable<any> {
-    return this.http.get(`${baseUrl}/${keyword}`);
+    return this.http.get(`${baseUrl}/get-keyword/${keyword}`);
   }
 
   getAllSections(): Observable<any> {
@@ -26,6 +26,7 @@ export class SectionCreationService {
   }
 
   postSection(data: any): Observable<any> {
+    console.log(data);
     return this.http.post(baseUrl, data, { responseType: 'text' });
   }
 
@@ -37,6 +38,11 @@ export class SectionCreationService {
   updateSection(data: any): Observable<any> {
     console.log(`${baseUrl}/get-id`);
     return this.http.put(`${baseUrl}/get-id/${data.id}`, data, { responseType: 'text' });
+  }
+
+  // remove
+  deleteSection(data: any): Observable<any> {
+    return this.http.delete(`${baseUrl}/get-id/${data.id}`, data);
   }
 
 

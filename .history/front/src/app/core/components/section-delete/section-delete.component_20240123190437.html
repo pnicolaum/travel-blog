@@ -1,0 +1,17 @@
+<form action="" class="form">
+
+  <input type="submit" value="Ver todas las palabras clave de sections" class="btn" (click)="getAllSections()">
+
+  <br>
+
+  <!-- keyword -->
+  <label for="keyword">Palabra clave del blog:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="deleteSection()">
+
+
+</form>
