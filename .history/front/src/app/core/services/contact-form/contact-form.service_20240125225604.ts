@@ -16,4 +16,10 @@ export class ContactFormService {
   postMail(data: any): Observable<any> {
     return this.http.post(`${baseUrl}send-mail/`, data, { responseType: 'text' });
   }
+
+  // post
+  postConfirmationMail(data: any): Observable<any> {
+    console.log(data.code)
+    return this.http.post(`${baseUrl}confirmation/`, data, { responseType: 'text' });
+  }
 }

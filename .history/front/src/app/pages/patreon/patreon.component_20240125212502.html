@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<section>
+  <div class="info-cont">
+    <img src="../../assets/hero_about_us.jpeg" alt="">
+    <div class="text-cont">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, leo in pharetra pretium, urna augue
+        tempor
+        tortor, id mollis odio ipsum sed est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at ipsum
+        sodales, venenatis tortor quis, bibendum velit. Cras molestie ante nulla, id scelerisque ipsum efficitur nec.
+        Praesent fringilla suscipit sodales. Donec fringilla suscipit diam quis efficitur. Nulla aliquet sagittis
+        accumsan.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, leo in pharetra pretium, urna augue
+        tempor
+        tortor, id mollis odio ipsum sed est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at ipsum
+        sodales, venenatis tortor quis, bibendum velit. Cras molestie ante nulla, id scelerisque ipsum efficitur nec.
+        Praesent fringilla suscipit sodales. Donec fringilla suscipit diam quis efficitur. Nulla aliquet sagittis
+        accumsan.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="pat-btn">
+    <button>Ir a patreon</button>
+    <img src="../../assets/patreon_banner.png" alt="">
+  </div>
+
+  <div class="ppal">
+    <input type="number" id="amount">
+    <div id="paypal-donate-button-container"></div>
+
+    <script>
+      PayPal.Donation.Button({
+        env: 'sandbox',
+        hosted_button_id: 'YOUR_SANDBOX_HOSTED_BUTTON_ID',
+        // business: 'YOUR_EMAIL_OR_PAYERID',
+        image: {
+          src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+          title: 'PayPal - The safer, easier way to pay online!',
+          alt: 'Donate with PayPal button'
+        },
+        onComplete: function (params) {
+          // Your onComplete handler
+        },
+      }).render('#paypal-donate-button-container');
+    </script>
+  </div>
+
+
+
+  <div class="imgs-cont">
+    <div class="slide"><img src="../../assets/slide1.png" alt="img1"></div>
+    <div class="slide"><img src="../../assets/slide2.png" alt="img"></div>
+    <div class="slide"><img src="../../assets/slide3.png" alt="img3"></div>
+    <div class="slide"><img src="../../assets/slide4.png" alt="img4"></div>
+    <div class="slide"><img src="../../assets/slide5.png" alt="img5"></div>
+    <div class="slide"><img src="../../assets/slide6.png" alt="img6"></div>
+  </div>
+</section>
+
+
+<section>
+
+</section>
+<app-footer></app-footer>
