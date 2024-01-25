@@ -1,0 +1,34 @@
+<form class="formulario">
+  <fieldset>
+    <legend>Contactame llenando los campos</legend>
+
+    <div class="container-fields">
+
+      <!-- <div class="field">
+        <div class="field">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+      </div> -->
+      <!-- Título -->
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name" required>
+
+
+      <label for="mail">Correo</label>
+      <input type="text" id="mail" name="mail" [(ngModel)]="mail" required>
+
+
+      <div class="field">
+        <label>Mensaje</label>
+        <textarea></textarea>
+      </div>
+
+    </div>
+
+    <div class="filed-btn">
+      <button class="button-send">Enviar</button>
+    </div>
+
+  </fieldset>
+</form>
