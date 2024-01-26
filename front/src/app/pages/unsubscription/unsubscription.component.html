@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+
+<form action="">
+
+  <label for="mail">Escribe tu mail para desuscribirte</label>
+  <div>
+    <input type="mail" name="mail" id="mail" placeholder="ejemplo@gmail.com" [(ngModel)]="mail">
+    <input type="button" name="unsubscription" id="unsubscription" value="Cancelar subscripcion" (click)="deleteMail()">
+  </div>
+
+</form>
+
+
+
+<app-footer></app-footer>
