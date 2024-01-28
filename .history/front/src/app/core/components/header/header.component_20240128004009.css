@@ -1,0 +1,44 @@
+body {
+  color: var(--paynesgray);
+}
+
+a {
+  /* color: white; */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  place-items: center;
+  height: 100px;
+
+  border-bottom: 10px solid var(--orange);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.header-central {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.header-field {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.header-field:hover {
+  color: aqua;
+
+  border-bottom: 3px solid aqua;
+}
