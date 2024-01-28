@@ -1,0 +1,118 @@
+.hero-cont {
+  position: relative;
+}
+
+.hero-cont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Ajusta el valor de alfa según sea necesario para la opacidad */
+}
+
+.hero-cont img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.hero-cont p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Contact form */
+.contact-cont {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+/* Donaciones */
+.donation-cont {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Subscripccion via mail */
+.subscription-cont {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: aqua;
+  padding: 10px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .subscription-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.form-subscription {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  text-decoration: none;
+  border: 0px;
+  outline: none;
+}
+
+input[type=email] {
+  width: 250px;
+  height: 40px;
+}
+
+input[type=button] {
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 40px;
+}
+
+input[type=checkbox] {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+a {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .contact-cont {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .contact-cont {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact-cont {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}

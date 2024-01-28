@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<!-- Botón que abrirá el modal -->
+<button type="button" (click)="openModal()">Abrir Modal</button>
+
+<!-- Modal -->
+<div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="preventClose($event)">
+    <div class="modal-header">
+      <h2>Título del Modal</h2>
+      <span class="close" (click)="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <!-- Contenido del modal -->
+      <p>Contenido del modal...</p>
+    </div>
+  </div>
+</div>
+
+
+<app-slider></app-slider>
+
+<h1>Últimos blogs!</h1>
+<app-last-blogs></app-last-blogs>
+
+
+<div class="contact-cont">
+  <h1>Para más información...</h1>
+  <app-contact-form></app-contact-form>
+</div>
+
+
+<section class="donation-cont">
+  Contribuye con nostros a traves de donaciones
+  <br>
+  o apoyanos desde patreon
+  <input type="button" value="DONACIONES">
+  <a href="/patreon">
+    <img src="../../assets/patreon_banner.png" alt="desc" width="100px">
+  </a>
+</section>
+
+
+<!-- Subscripccion via mail -->
+<app-subscription></app-subscription>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

@@ -1,0 +1,11 @@
+<div class="recent-blogs-cont">
+  <div *ngFor="let blog of recentBlogs; let i = index" class="blogs-cont">
+
+    <a href="/blogs/{{ blog.keyword }}">{{ blog.title }}</a>
+    <a href="/blogs/{{ blog.keyword }}" class="cont-img">
+      <img [src]="imageUrls[i]" alt="{{ recentBlogs[i].keyword }}" />
+    </a>
+
+
+  </div>
+</div>
