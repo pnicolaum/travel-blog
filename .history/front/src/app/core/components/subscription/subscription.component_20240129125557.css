@@ -1,0 +1,38 @@
+input {
+  width: 50%;
+  text-align: center;
+  outline: none;
+  border: 1px solid var(--darkblue);
+  font-size: large;
+  margin: 1rem 0;
+}
+
+input[type="submit"] {
+  width: 150px;
+  height: 30px;
+}
+
+
+input[type="checkbox"] {
+  margin: 0;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+.cont-form {
+  text-align: left;
+}
+
+
+
+.btn {
+  background-color: var(--orange);
+  color: var(--darkblue);
+  font-weight: bold;
+
+}

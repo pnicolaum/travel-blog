@@ -1,0 +1,26 @@
+img {
+  width: 250px;
+  height: 250px;
+
+}
+
+.blog-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-blog {
+  font-size: 1.6rem;
+  text-align: left;
+  max-width: 100%;
+  text-align: justify;
+  white-space: pre-wrap;
+
+  margin: 0 3rem;
+}
+
+.cont-sections {
+  margin: 3rem;
+}

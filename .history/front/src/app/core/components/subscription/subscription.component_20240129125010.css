@@ -1,0 +1,19 @@
+label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--darkblue);
+  font-size: large;
+}
+
+input {
+  width: 50%;
+  text-align: center;
+  outline: none;
+  border: 1px solid var(--darkblue);
+  font-size: large;
+}
+
+input[type="submit"] {
+  width: 150px;
+  height: 30px;
+}

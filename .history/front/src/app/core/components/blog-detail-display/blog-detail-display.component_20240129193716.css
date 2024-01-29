@@ -1,0 +1,29 @@
+img {
+  width: 250px;
+  height: 250px;
+
+}
+
+.blog-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-blog {
+  font-size: 1.6rem;
+  text-align: left;
+  max-width: 100%;
+  /* Esto evita que el texto se salga del contenedor */
+
+  text-align: justify;
+  white-space: pre-wrap;
+  overflow: hidden;
+  /* Esto también puede ser útil si el texto es demasiado largo */
+
+}
+
+.cont-sections {
+  margin: 3rem;
+}
