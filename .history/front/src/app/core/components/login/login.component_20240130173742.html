@@ -1,0 +1,49 @@
+<section>
+  <form action="" class="cont">
+
+    <label>Usuario</label>
+    <input type="text" [(ngModel)]="usernameCredential" name="usernameCredential">
+
+    <label>Contraseña</label>
+    <input type="password" [(ngModel)]="passwordCredential" name="passwordCredential">
+
+    <div class="cont-btn">
+      <input type="submit" value="Inicio sesion" class="btn" (click)="postCredentials()">
+    </div>
+  </form>
+
+  <form action="" class="cont">
+    <label>Usuario*</label>
+    <input type="text" [(ngModel)]="username" name="username">
+
+    <label>Nombre*</label>
+    <input type="text" [(ngModel)]="name" name="name">
+
+    <label>Apellido*</label>
+    <input type="text" [(ngModel)]="surname" name="surname">
+
+    <label>Email*</label>
+    <input type="mail" [(ngModel)]="mail" name="mail">
+
+    <label>Contraseña*</label>
+    <input type="password" [(ngModel)]="password" name="password">
+
+    <label>Confirma contraseña*</label>
+    <input type="password" [(ngModel)]="passwrod2" name="password2">
+
+    <label>Confirma admin*</label>
+    <input type="password" [(ngModel)]="masterPassword" name="masterPassword">
+
+    <div class="cont-btn">
+      <input type="submit" value="Registrar" class="btn" (click)="postLogin()">
+
+    </div>
+
+  </form>
+
+  <div class="cont">
+    <div class="cont-btn">
+      <input type="submit" value="Log out" class="btn" (click)="logOut()">
+    </div>
+  </div>
+</section>

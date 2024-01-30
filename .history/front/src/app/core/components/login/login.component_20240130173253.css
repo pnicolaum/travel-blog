@@ -1,0 +1,32 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+label {
+  margin: 1.3rem 0;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid black;
+  height: 60px;
+}
+
+input:focus {
+  outline: #ffffff;
+}
+
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+
+
+
+.gender_choice {
+  margin-right: 30px;
+}
