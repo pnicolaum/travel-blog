@@ -1,0 +1,38 @@
+h1 {
+  color: red;
+}
+
+img {
+  width: 500px;
+  height: 100%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.about-cont {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-text-cont {
+  margin-left: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  img {
+    width: 400px;
+  }
+
+  .about-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text-cont {
+    margin-left: 0;
+  }
+}

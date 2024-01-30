@@ -1,0 +1,70 @@
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.info-cont img {
+  width: 300px;
+  height: auto;
+}
+
+
+.info-cont {
+  margin-top: 1.5rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-cont {
+  margin: 0;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+
+
+/* patreon buton */
+
+.cont-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  gap: 30px;
+}
+
+.cont-btn img {
+  height: 100px;
+}
+
+.btn {
+  background-color: var(--orange);
+  color: var(--darkblue);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 100px;
+  width: 250px;
+
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+.imgs-cont img {
+  width: 200px;
+}
+
+.imgs-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
