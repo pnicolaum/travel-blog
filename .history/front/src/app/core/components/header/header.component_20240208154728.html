@@ -1,0 +1,40 @@
+<div class="header">
+
+  <div>
+    <a href="/"><img class="banner" src="../../assets/banner.jpg" alt=""></a>
+  </div>
+
+  <div class="header-central">
+
+    <a href="/blogs" class="header-field">BLOGS</a>
+
+    <a href="/about-us" class="header-field">QUIENES SOMOS</a>
+
+    <a href="/patreon" class="header-field">PATREON</a>
+
+    <ng-container *ngIf="authService.isAuthenticated()">
+      <a href="/blog-admin" class="header-field">BLOG ADMIN</a>
+    </ng-container>
+
+  </div>
+
+  <div class="header-dch">
+    <a href="https://www.instagram.com/destinoscompartidos2024/">
+      <img src="../../assets/facebook.png" alt="">
+    </a>
+    <a href="">
+      <img src="../../assets/instagram.png" alt="">
+    </a>
+    <a href="">
+      <img src="../../assets/twitter.png" alt="">
+    </a>
+    <a href="">
+      <img src="../../assets/tiktok.png" alt="">
+    </a>
+
+    <ng-container *ngIf="authService.isAuthenticated()">
+      <button routerLink="/identification" class="btn">Cerrar sesión</button>
+    </ng-container>
+  </div>
+
+</div>

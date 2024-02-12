@@ -1,0 +1,26 @@
+<form action="" class="form">
+
+  <!-- keyword -->
+  <label for="keyword">Palabra clave de la seccion:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Eliminar sección" class="btn" (click)="deleteSection()">
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Estado Eliminación</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+
+</form>
