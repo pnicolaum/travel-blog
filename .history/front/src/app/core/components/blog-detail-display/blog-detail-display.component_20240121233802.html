@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div *ngIf="blog" class="blog-cont">
+  <h2>Titulo: {{ title }}</h2>
+  <h2>Palabra clave: {{ keyword }}</h2>
+  <img [src]="imageUrl" alt="{{ keyword }}" />
+  <h2>Continente: {{ continent }}</h2>
+  <h2>Country: {{ country }}</h2>
+  <h2>Descripcion: {{ description }}</h2>
+  <h2>Dias: {{ days }}</h2>
+  <h2>Fecha: {{ date }}</h2>
+
+
+  <!-- Otros detalles del blog... -->
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

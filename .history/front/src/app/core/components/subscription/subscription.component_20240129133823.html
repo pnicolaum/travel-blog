@@ -1,0 +1,60 @@
+<section class="cont">
+  <p>
+    Mantente al día de nuestras novedades suscribiendote con tu mail!
+    <br>
+    Te actualizaremos cuando subamos un blog nuevo!
+  </p>
+
+  <form action="" class="cont-form">
+    <div class="email-cont">
+      <input type="email" name="email" id="email" placeholder="Escribe tu mail" [(ngModel)]="mail">
+      <input type="button" class="btn" name="subscription" id="subscription" value="Suscribirse" (click)="verifyMail()">
+    </div>
+
+    <div class="cont-check">
+      <input type="checkbox" name="terms" id="terms">
+      <label for="terms">He leído y aceptro la
+        <a href="">política de privacidad</a>
+      </label>
+    </div>
+  </form>
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Mensaje de creación</h2>
+
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>Se ha enviado un codigo de verificación a su correo</p>
+        <div>
+          <label for="code"></label>
+          <input type="number" name="code" id="code" [(ngModel)]="codeInput">
+          <span class="placeholder-text">Ejemplo: 12345</span>
+        </div>
+
+        <input type="button" name="codeBtn" id="codeBtn" value="codeBtn" (click)="postMail()">
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen2" (click)="closeModal2()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Mensaje de mail</h2>
+        <span class="close" (click)="closeModal2()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje2}}</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>

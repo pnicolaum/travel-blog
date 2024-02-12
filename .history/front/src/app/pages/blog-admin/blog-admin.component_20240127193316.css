@@ -1,0 +1,27 @@
+.cont {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.img-form-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-cont {
+  display: flex;
+  align-content: center;
+}
+
+.for {
+  display: flex;
+}

@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div *ngIf="blog" class="blog-cont">
+  <h2>Titulo: {{ title }}</h2>
+  <img [src]="imageUrl" alt="{{ keyword }}" />
+  <h2>Descripcion: {{ description }}</h2>
+</div>
+
+<div class="blog-cont">
+  <h2>Titulo: {{ sectionTitle }}</h2>
+  <!-- <img [src]="imageUrl" alt="{{ keyword }}" /> -->
+  <h2>Descripcion: {{ description }}</h2>
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

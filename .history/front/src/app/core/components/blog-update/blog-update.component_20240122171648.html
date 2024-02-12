@@ -1,0 +1,20 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="keyword">Palabra clave:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+
+  <br>
+
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postBlog()">
+
+
+</form>

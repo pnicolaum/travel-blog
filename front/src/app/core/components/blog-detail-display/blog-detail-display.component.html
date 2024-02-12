@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div *ngIf="blog" class="cont-blog">
+  <h1>{{ title }}</h1>
+  <img [src]="imageUrl" alt="{{ keyword }}" class="img-blog" />
+  <p class="pre-blog">{{ description }}</p>
+</div>
+
+
+
+<div *ngFor="let section of sections; let i = index" class="cont-section">
+  <h2>{{ section.title }}</h2>
+  <img [src]="sectionImageUrls[i]" alt="{{ keyword }}" class="img-section" />
+  <p class="pre-section">{{ section.description }}</p>
+
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

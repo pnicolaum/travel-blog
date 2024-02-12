@@ -1,0 +1,68 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="keyword">Palabra clave:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+
+  <br>
+
+  <!-- Continente -->
+  <label for="continent">Continente:</label>
+  <select id="continent" name="continent" [(ngModel)]="continent" required>
+    <!-- <option value="america">América</option> -->
+    <option value="Europa">Europa</option>
+    <option value="Asia">Asia</option>
+    <!-- <option value="africa">África</option> -->
+    <!-- <option value="oceania">Oceanía</option> -->
+    <option value="Spain">España</option>
+    <option value="Italy">Italia</option>
+  </select>
+
+  <br>
+
+  <!-- País -->
+  <label for="country">País:</label>
+  <input type="text" id="country" name="country" [(ngModel)]="country" required>
+
+  <br>
+
+  <!-- Descripción -->
+  <label for="description">Descripción:</label>
+  <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+
+  <br>
+
+  <!-- Días -->
+  <label for="days">Días:</label>
+  <select id="days" name="days" [(ngModel)]="days" required>
+    <option [value]="1">1</option>
+    <option [value]="2">2</option>
+    <option [value]="3">3</option>
+    <option [value]="4">4</option>
+    <option [value]="5">5</option>
+    <option [value]="6">6</option>
+    <option [value]="7">7</option>
+  </select>
+
+  <br>
+
+  <!-- Fecha -->
+  <label for="date">Fecha:</label>
+  <input type="date" id="date" name="date" [(ngModel)]="date" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postBlog()">
+
+
+  <p>Mensaje: </p>
+  {{mensaje}}
+
+</form>

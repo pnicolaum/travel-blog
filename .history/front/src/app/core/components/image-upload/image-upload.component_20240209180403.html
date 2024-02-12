@@ -1,0 +1,36 @@
+<section>
+  <div class="cont">
+    <label for="fileInput">Seleccionar imagen para subir:</label>
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" />
+    <button (click)="uploadImage()" class="btn">Subir imagen</button>
+  </div>
+
+  <div class="cont">
+    <label for="getImages">Obtener nombres de las imagenes</label>
+    <input type="button" class="btn" name="getImages" id="getImages" (click)="getAllImages()"
+      value="Get all images names">
+    <p class="text">{{texto}}</p>
+  </div>
+
+  <div class="cont">
+    <label for="imageName">Nombre de la imagen a eliminar:</label>
+    <input type="text" id="imageName" [(ngModel)]="imageNameToDelete" />
+    <button (click)="deleteImage()" class="btn">Eliminar imagen</button>
+  </div>
+
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Mensaje de imagen</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>

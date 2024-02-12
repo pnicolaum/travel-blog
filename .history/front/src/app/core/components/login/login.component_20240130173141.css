@@ -1,0 +1,45 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: #ffffff;
+}
+
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #e99b43;
+  border: 3px solid #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 1.2rem 2rem;
+  text-decoration: none;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+  width: 40%;
+}
+
+
+.gender_choice {
+  margin-right: 30px;
+}

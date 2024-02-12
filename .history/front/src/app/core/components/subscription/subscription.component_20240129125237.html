@@ -1,0 +1,25 @@
+<section class="cont">
+  <p>
+    Mantente al día de nuestras novedades suscribiendote con tu mail!
+    <br>
+    Te actualizaremos cuando subamos un blog nuevo!
+  </p>
+
+  <form action="" class="form-subscription">
+    <div class="email-cont">
+      <input type="email" name="email" id="email" placeholder="Escribe tu mail" [(ngModel)]="mail">
+      <input type="button" class="btn" name="subscription" id="subscription" value="Suscribirse" (click)="verifyMail()">
+    </div>
+
+    <div>
+      <input type="checkbox" name="terms" id="terms">
+      <label for="terms">He leído y aceptro la
+        <a href="">política de privacidad</a>
+      </label>
+    </div>
+  </form>
+
+  <input type="number" name="code" id="code" placeholder="12345" [(ngModel)]="codeInput">
+  <input type="button" name="codeBtn" id="codeBtn" value="codeBtn" (click)="postMail()">
+
+</section>

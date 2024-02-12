@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="cont">
+  <div>
+    <h2>CREATE</h2>
+    <app-blog-creation></app-blog-creation>
+  </div>
+  <div>
+    <h2>UPDATE</h2>
+    <app-blog-update></app-blog-update>
+  </div>
+  <div class="cont-3">
+    <h2>DELETE</h2>
+    <app-blog-delete></app-blog-delete>
+  </div>
+  <div class="cont-4">
+    <h2>SEE KEYWORDS</h2>
+    <div class="key-cont">
+
+      <input type="submit" value="Ver palabras clave" class="btn" (click)="getAllBlogs()">
+      <p>{{texto}}</p>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="cont">
+  <div>
+    <h2>CREATE</h2>
+    <app-section-creation></app-section-creation>
+  </div>
+  <div>
+    <h2>UPDATE</h2>
+    <app-section-update></app-section-update>
+  </div>
+  <div>
+    <h2>DELETE</h2>
+    <app-section-delete></app-section-delete>
+  </div>
+  <div class="cont-4">
+    <h2>SEE KEYWORDS</h2>
+    <div class="key-cont">
+
+      <input type="submit" value="Ver palabras clave" class="btn" (click)="getAllBlogs()">
+      <p>{{texto}}</p>
+    </div>
+  </div>
+
+</div>
+
+
+<h1>Foto managment</h1>
+<div class="img-form-cont">
+  <app-image-upload></app-image-upload>
+</div>
+
+
+<footer>
+  <app-footer></app-footer>
+</footer>

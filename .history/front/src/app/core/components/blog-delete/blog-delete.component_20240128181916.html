@@ -1,0 +1,28 @@
+<form action="" class="form">
+
+  <!-- keyword -->
+  <label for="keyword">Palabra clave del blog</label>
+  <br>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Eliminar blog" class="btn" (click)="deleteBlog()">
+
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Estado eliminación</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+
+</form>

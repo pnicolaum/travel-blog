@@ -1,0 +1,36 @@
+a {
+  color: white;
+  border-bottom: 5px solid white;
+  text-decoration: none;
+  transition: font-size 0.3s ease;
+}
+
+a:hover {
+  font-size: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(197, 196, 196);
+  color: white;
+  margin-top: 30px;
+}
+
+.footer-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  gap: 25px;
+}

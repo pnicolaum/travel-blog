@@ -1,0 +1,21 @@
+img {
+  width: 250px;
+  height: 250px;
+
+}
+
+.blog-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-blog {
+  font-size: large;
+  font-weight: bold;
+}
+
+.cont-sections {
+  margin: 3rem;
+}

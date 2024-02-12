@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+
+<form action="">
+
+  <label for="mail">Escribe tu mail para desuscribirte</label>
+  <div class="cont">
+    <input type="mail" name="mail" id="mail" placeholder="ejemplo@gmail.com" [(ngModel)]="mail">
+    <input type="button" name="unsubscription" id="unsubscription" value="Cancelar subscripcion" (click)="deleteMail()">
+  </div>
+
+</form>
+
+<!-- Modal -->
+<div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="preventClose($event)">
+    <div class="modal-header">
+      <h2>Mensaje de creación</h2>
+      <span class="close" (click)="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <!-- Contenido del modal -->
+      <p>{{mensaje}}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.btn {
+  background-color: var(--orange);
+  color: var(--darkblue);
+  font-weight: bold;
+  width: 300px;
+  font-size: 2.5rem;
+}

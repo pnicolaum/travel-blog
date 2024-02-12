@@ -1,0 +1,37 @@
+<form action="" class="form">
+
+  <input type="submit" value="Ver todas las palabras clave de blogs" class="btn" (click)="getAllSections()">
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="sectionKeyword">Indica la palabra clave del section:</label>
+  <input type="text" id="sectionKeyword" name="sectionKeyword" [(ngModel)]="sectionKeyword" required>
+
+  <br>
+
+  <input type="submit" value="Mostrar section" class="btn" (click)="getSectionByKeyword()">
+
+
+  <br>
+  <br>
+  <br>
+
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+
+  <br>
+
+  <!-- Descripción -->
+  <label for="description">Descripción:</label>
+  <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Actualizar section" class="btn" (click)="updateSection()">
+
+
+</form>

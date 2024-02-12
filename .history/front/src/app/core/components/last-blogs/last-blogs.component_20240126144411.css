@@ -1,0 +1,12 @@
+.recent-blogs-cont {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}

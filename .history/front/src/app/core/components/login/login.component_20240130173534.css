@@ -1,0 +1,39 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+label {
+  margin: 1.3rem 0;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid black;
+
+}
+
+input:focus {
+  outline: #ffffff;
+}
+
+input[type=submit] {
+  height: 150px;
+  width: 100px;
+
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+
+}
+
+.btn {
+  background-color: var(--orange);
+  color: var(--darkblue);
+  font-weight: bold;
+
+}

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<form action="" class="form-subscription">
+  <div class="email-cont">
+    <input type="email" name="email" id="email" placeholder="Escribe tu mail" [(ngModel)]="mail">
+    <input type="button" name="subscription" id="subscription" value="Suscribirse" (click)="deleteMail()">
+  </div>
+
+  <div>
+    <input type="checkbox" name="terms" id="terms">
+    <label for="terms">He leído y aceptro la
+      <a href="">política de privacidad</a>
+    </label>
+  </div>
+</form>
+
+
+
+<app-footer></app-footer>

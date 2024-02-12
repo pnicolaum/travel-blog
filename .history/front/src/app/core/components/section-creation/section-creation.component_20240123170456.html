@@ -1,0 +1,34 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+  <br>
+
+  <!-- Keyword -->
+  <label for="keyword">Palabra clave para seccion:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+  <br>
+
+  <!-- Texto -->
+  <label for="description">Descripcion:</label>
+  <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+
+  <br>
+
+  <label for="structure">Estructura:</label>
+  <input type="number" id="structure" name="structure" [(ngModel)]="structure" required>
+
+  <br>
+
+  <!-- Keyword -->
+  <label for="keyword">Palabra clave del blog:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+  <br>
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postSection()">
+
+
+</form>

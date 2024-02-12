@@ -1,0 +1,68 @@
+<section>
+  <ng-container *ngIf="!authService.isAuthenticated()">
+    <form action="" class="cont">
+
+      <label>Usuario</label>
+      <input type="text" [(ngModel)]="usernameCredential" name="usernameCredential">
+
+      <label>Contraseña</label>
+      <input type="password" [(ngModel)]="passwordCredential" name="passwordCredential">
+
+      <div class="cont-btn">
+        <input type="submit" value="Iniciar sesión" class="btn" (click)="postCredentials()">
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-container *ngIf="!authService.isAuthenticated()">
+    <form action="" class="cont">
+      <label>Usuario*</label>
+      <input type="text" [(ngModel)]="username" name="username">
+
+      <label>Nombre*</label>
+      <input type="text" [(ngModel)]="name" name="name">
+
+      <label>Apellido*</label>
+      <input type="text" [(ngModel)]="surname" name="surname">
+
+      <label>Email*</label>
+      <input type="mail" [(ngModel)]="mail" name="mail">
+
+      <label>Contraseña*</label>
+      <input type="password" [(ngModel)]="password" name="password">
+
+      <label>Confirma contraseña*</label>
+      <input type="password" [(ngModel)]="passwrod2" name="password2">
+
+      <label>Confirma admin*</label>
+      <input type="password" [(ngModel)]="masterPassword" name="masterPassword">
+
+      <div class="cont-btn">
+        <input type="submit" value="Registrarse" class="btn" (click)="postLogin()">
+      </div>
+
+    </form>
+  </ng-container>
+
+
+  <div class="cont">
+    <div class="cont-btn">
+      <input type="submit" value="Cerrar sesión" class="btn" (click)="logOut()">
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Mensaje de creación</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+</section>

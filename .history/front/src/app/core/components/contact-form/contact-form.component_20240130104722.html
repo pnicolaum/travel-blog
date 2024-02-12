@@ -1,0 +1,42 @@
+<form class="form">
+
+  <legend>Contáctanos llenando los campos</legend>
+
+  <div class="cont">
+
+    <div class="cont-2">
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" [(ngModel)]="name" required>
+      </div>
+
+      <div class="field">
+        <label for="mail">Correo</label>
+        <input type="text" id="mail" name="mail" [(ngModel)]="mail" required>
+      </div>
+    </div>
+
+    <label for="text">Mensaje</label>
+    <textarea id="text" name="text" [(ngModel)]="text" required></textarea>
+
+
+  </div>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postMail()">
+
+  <!-- Modal -->
+  <div class="modal" [class.open]="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventClose($event)">
+      <div class="modal-header">
+        <h2>Mensaje de creación</h2>
+        <span class="close" (click)="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del modal -->
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+  </div>
+
+</form>

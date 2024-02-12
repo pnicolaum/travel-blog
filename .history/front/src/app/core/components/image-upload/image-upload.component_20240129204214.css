@@ -1,0 +1,28 @@
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--darkblue);
+  font-size: large;
+}
+
+input[type="text"] {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  border: 1px solid var(--darkblue);
+  font-size: large;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+}

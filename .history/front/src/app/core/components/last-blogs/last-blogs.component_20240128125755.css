@@ -1,0 +1,19 @@
+.recent-blogs-cont {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogs-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}

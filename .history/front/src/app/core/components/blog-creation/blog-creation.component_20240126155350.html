@@ -1,0 +1,90 @@
+<form action="" class="form">
+  <!-- Título -->
+  <label for="title">Título:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required>
+
+  <br>
+
+  <!-- Imagen -->
+  <label for="keyword">Palabra clave:</label>
+  <input type="text" id="keyword" name="keyword" [(ngModel)]="keyword" required>
+
+
+  <br>
+
+  <!-- Continente -->
+  <label for="continent">Continente:</label>
+  <select id="continent" name="continent" [(ngModel)]="continent" required>
+    <!-- <option value="america">América</option> -->
+    <option value="Europa">Europa</option>
+    <option value="Asia">Asia</option>
+    <!-- <option value="africa">África</option> -->
+    <!-- <option value="oceania">Oceanía</option> -->
+    <option value="Spain">España</option>
+    <option value="Italy">Italia</option>
+  </select>
+
+  <br>
+
+  <!-- País -->
+  <label for="country">País:</label>
+  <input type="text" id="country" name="country" [(ngModel)]="country" required>
+
+  <br>
+
+  <!-- Descripción -->
+  <label for="description">Descripción:</label>
+  <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+
+  <br>
+
+  <!-- Días -->
+  <label for="days">Días:</label>
+  <select id="days" name="days" [(ngModel)]="days" required>
+    <option [value]="1">1</option>
+    <option [value]="2">2</option>
+    <option [value]="3">3</option>
+    <option [value]="4">4</option>
+    <option [value]="5">5</option>
+    <option [value]="6">6</option>
+    <option [value]="7">7</option>
+  </select>
+
+  <br>
+
+  <!-- Fecha -->
+  <label for="date">Fecha:</label>
+  <input type="date" id="date" name="date" [(ngModel)]="date" required>
+
+  <br>
+
+  <!-- Botón de envío -->
+  <input type="submit" value="Enviar" class="btn" (click)="postBlog()">
+  s
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

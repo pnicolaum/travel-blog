@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<div class="cont">
+  <div>
+    <h3>CREATE</h3>
+    <app-blog-creation></app-blog-creation>
+  </div>
+  <div>
+    <h3>UPDATE</h3>
+    <app-blog-update></app-blog-update>
+  </div>
+  <div>
+    <h3>DELETE</h3>
+    <app-blog-delete></app-blog-delete>
+
+    <br><br>
+    <div class="key-cont">
+      <input type="submit" value="Ver palabras clave" class="btn" (click)="getAllBlogs()">
+      <p>{{texto}}</p>
+    </div>
+
+  </div>
+
+
+</div>
+
+<h1>Update</h1>
+<div class="cont">
+  <app-section-creation></app-section-creation>
+  <app-section-update></app-section-update>
+  <app-section-delete></app-section-delete>
+</div>
+
+<h1>Delete</h1>
+<div class="cont">
+
+
+</div>
+
+<h1>Foto managment</h1>
+<div class="img-form-cont">
+  <app-image-upload></app-image-upload>
+</div>
+
+
+<footer>
+  <app-footer></app-footer>
+</footer>

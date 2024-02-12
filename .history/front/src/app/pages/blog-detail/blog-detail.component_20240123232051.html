@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<section class="filter-cont">
+  <div>
+    Filtros
+  </div>
+  <div>
+    <label for="continentSelect">Continente: </label>
+    <select id="continentSelect" name="continentSelect" [(ngModel)]="continentSelect" (change)="getBlogsByContinent()">
+      <option value="Asia">Asia</option>
+      <option value="Europa">Europa</option>
+      <option value="Spain">Spain</option>
+    </select>
+  </div>
+  <div>
+    <label for="country">País: </label>
+    <input type="text" placeholder="Pais" id="name">
+  </div>
+
+  <div>
+    <label for="daysSelect">Días: </label>
+    <select id="daysSelect" name="days">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+  </div>
+
+</section>
+
+
+<div class="all-blogs-cont">
+  <div *ngFor="let blog of blogs; let i = index" class="blogs-cont">
+
+    <a href="/blogs/{{ blog.keyword }}">{{ blog.title }}</a>
+    <a href="/blogs/{{ blog.keyword }}">
+      <img [src]="imageUrls[i]" alt="{{ imageName }}" />
+    </a>
+
+
+  </div>
+</div>
